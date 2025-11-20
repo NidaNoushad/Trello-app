@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "897207d0-c274-40d8-b7d2-cd5844829bfa",
+		"name": "Trello API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47285117",
+		"_collection_link": "https://nida11noushad-2877165.postman.co/workspace/Nida-Noushad's-Workspace~6d866992-7fff-4eaa-80a4-ff75334bdc83/collection/47285117-897207d0-c274-40d8-b7d2-cd5844829bfa?action=share&source=collection_link&creator=47285117"
+	},
+	"item": [
+		{
+			"name": "Create Card",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"listId\": \"69177601d4920e499b5919ac\",\r\n  \"name\": \"My new card\",\r\n  \"desc\": \"creating new card through postman\",\r\n  \"clientId\": \"postman123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Card",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Updating new card\",\r\n  \"desc\": \"checking updation\",\r\n  \"idList\": \"69177601d4920e499b5919ad\",\r\n  \"pos\": \"top\",\r\n  \"clientId\": \"postman123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/691e0020bd4329d1e894a3f3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"691e0020bd4329d1e894a3f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Card",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"clientId\": \"postman123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/tasks/691e0020bd4329d1e894a3f3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"tasks",
+						"691e0020bd4329d1e894a3f3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Board",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Hiring Board\",\r\n  \"defaultLists\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/boards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"boards"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
